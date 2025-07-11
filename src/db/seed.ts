@@ -1,14 +1,13 @@
 import { reset, seed } from 'drizzle-seed';
 import { schema } from './schema/index.ts';
 import { db, sql } from './connection.ts';
-import { count } from 'console';
 
 await reset(db, schema)
 
 await seed(db, schema).refine((f) => {
     return {
         rooms: {
-            count: 20,
+            count: 10,
             columns: {
                 name: f.companyName(),
                 description: f.loremIpsum(),
