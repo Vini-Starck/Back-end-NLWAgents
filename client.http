@@ -1,8 +1,7 @@
 # Variables
-
 @baseUrl = http://localhost:3333
 
-# Health Check
+# Health check
 # @name healthCheck
 GET {{baseUrl}}/health
 
@@ -20,8 +19,8 @@ POST {{baseUrl}}/rooms
 Content-Type: application/json
 
 {
-    "name": "Segunda Sala teste",
-    "description": "Esta sala é a segunda de teste"
+  "name": "Sala de teste",
+  "description": "Essa é uma sala de teste"
 }
 
 ###
@@ -34,14 +33,13 @@ Content-Type: application/json
 # @name getRoomQuestions
 GET {{baseUrl}}/rooms/{{roomId}}/questions
 
-
 ###
 
 # Create question
 # @name createQuestion
-POST {{baseUrl}}/rooms/{{roomId}}/questions
+POST {{baseUrl}}/rooms/3bedbc7f-9cc3-4d1c-a43f-09d0c92a5f4b/questions
 Content-Type: application/json
 
 {
-    "question": "Qual o conceito de X dentro de Y?"
+  "question": "O que é Vue.js e a sua diferença em relação ao Angular?"
 }

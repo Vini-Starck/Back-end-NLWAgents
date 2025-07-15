@@ -15,6 +15,13 @@
       "when": 1752165715477,
       "tag": "0001_fancy_randall_flagg",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1752424796416,
+      "tag": "0002_spooky_madame_web",
+      "breakpoints": true
     }
   ]
 }
