@@ -21,7 +21,7 @@ app.register(fastifyCors, {
   origin: (origin, cb) => {
     const allowedOrigins = [
       'http://localhost:5173',
-      'https://seu-app.web.app', // ou outro domínio do Firebase Hosting
+      'https://nlw-agents-ai.web.app',
     ]
 
     if (!origin || allowedOrigins.includes(origin)) {
@@ -31,7 +31,6 @@ app.register(fastifyCors, {
     }
   }
 })
-
 
 app.register(fastifyMultipart)
 
@@ -50,4 +49,8 @@ app.register(uploadAudioRoute)
 app.register(createQuestionRoute2)
 app.register(getRoomChunksRoute)
 
-app.listen({ port: Number(process.env.PORT) || 3333 })
+const port = Number(process.env.PORT) || 3333
+
+app.listen({ port, host: '0.0.0.0' }, () => {
+  console.log(`🚀 HTTP server running on port ${port}`)
+})
