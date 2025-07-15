@@ -1,21 +1,23 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "_version": "22.0.0",
   "compilerOptions": {
+    "target": "es2022",
+    "module": "commonjs",
     "lib": [
-      "es2024",
+      "es2022",
       "ESNext.Array",
       "ESNext.Collection",
       "ESNext.Iterator"
     ],
-    "module": "nodenext",
-    "target": "es2022",
-    "noEmit": true,
-    "allowImportingTsExtensions": true,
+    "outDir": "./build",
+    "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "moduleResolution": "node16",
-    "strictNullChecks": true
-  }
+    "moduleResolution": "node",
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"]
 }
