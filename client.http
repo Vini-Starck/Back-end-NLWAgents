@@ -1,5 +1,5 @@
 # Variables
-@baseUrl = http://localhost:3333
+@baseUrl = https://back-end-nlwagents.onrender.com
 
 # Health check
 # @name healthCheck
@@ -25,7 +25,7 @@ Content-Type: application/json
 
 ###
 
-@roomId = {{createRoom.response.body.$.roomId}}
+@roomId = {createRoom.response.body.$.roomId}
 
 ###
 
