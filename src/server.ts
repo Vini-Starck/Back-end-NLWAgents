@@ -6,7 +6,6 @@ import {
   validatorCompiler,
   type ZodTypeProvider,
 } from 'fastify-type-provider-zod'
-import { env } from './env'
 // import { createQuestionRoute } from './http/routes/create-question.ts'
 import { createRoomRoute } from './http/routes/create-room'
 import { getRoomQuestions } from './http/routes/get-room-questions'

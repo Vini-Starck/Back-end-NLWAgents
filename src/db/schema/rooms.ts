@@ -4,5 +4,5 @@ export const rooms = pgTable('rooms', {
   id: uuid('id').primaryKey().defaultRandom(),
   name: text('name').notNull(),
   description: text('description'),
-  createdAt: timestamp('created_at').defaultNow().notNull(),
+  createdAt: timestamp().defaultNow().notNull(),
 })
