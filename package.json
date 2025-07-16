@@ -4,8 +4,8 @@
   "main": "build/server.js",
   "type": "commonjs",
   "scripts": {
-    "build": "tsc",
-    "start": "npm run db:migrate && node build/server.js",
+    "build": "tsc && npm run db:generate && npm run db:migrate",
+    "start": "node build/server.js",
     "dev": "node --env-file .env --experimental-strip-types --no-warnings --watch src/server.ts",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
